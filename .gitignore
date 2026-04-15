@@ -1,0 +1,23 @@
+# macOS
+.DS_Store
+
+# 개인 작업 결과물 / 기밀 제안서 (공개 불가)
+gpu_project/
+master_refrerence/
+outputs/
+work/
+
+# 평가용 (내부)
+evals/
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+
+# 편집기
+.vscode/
+.idea/
+*.swp
