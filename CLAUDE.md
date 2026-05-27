@@ -66,7 +66,11 @@ pip install python-hwpx
      |
 [8] ObjectFinder로 치환 결과 텍스트 검증
      |
-[9] (권장) 한글에서 열어 레이아웃 시각 확인 후 outputs/ 로 복사
+[9] (NFEC 심의문서일 경우) 지침 부합성 검증 — references/nfec-checklist.md 참조
+     |  - 8개 심의기준 본문 채움 확인 (사업부합성·국가전략·중복성·활용성·적정성·운영계획·관리실태·구축비용)
+     |  - 필수 제출서류 체크 (심의요청서·구축계획서·비교견적서 2건+·사전기획보고서 10억+)
+     |
+[10] (권장) 한글에서 열어 레이아웃 시각 확인 후 outputs/ 로 복사
 ```
 
 ### 핵심: HwpxDocument.open()은 사용하지 않는다
@@ -220,6 +224,7 @@ shutil.copy(WORK, OUTPUT)
 - 보고서(내부 보고용) -> `references/report-style.md` 를 먼저 읽고 따를 것
 - 공문서(기안문) -> `references/official-doc-style.md` 를 먼저 읽고 따를 것
 - **연구과제 제안서/계획서 -> `references/korean-proposal-style.md` 를 먼저 읽고 따를 것**
+- **NFEC 시설장비 심의문서 (심의요청서·구축계획서·사전기획보고서) -> `references/nfec-checklist.md` 를 먼저 읽고 따를 것 + 작성 후 8개 심의기준 체크리스트로 검증할 것**
 - 저수준 XML 조작 -> `references/xml-internals.md` 를 읽을 것
 
 ### 연구과제 제안서 작성 핵심 규칙 (korean-proposal-style.md 요약)
