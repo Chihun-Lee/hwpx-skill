@@ -10,12 +10,12 @@ HWPX는 한컴오피스 한글의 개방형 문서 포맷이다. 내부는 **ZIP
 
 | 역할 | 경로 |
 |------|------|
-| 프로젝트 루트 | `/Users/chihun/Code/hwp_claude/` |
-| 기본 양식 템플릿 | `/Users/chihun/Code/hwp_claude/assets/report-template.hwpx` |
-| 네임스페이스 수정 스크립트 | `/Users/chihun/Code/hwp_claude/scripts/fix_namespaces.py` |
-| 레퍼런스 문서 | `/Users/chihun/Code/hwp_claude/references/` |
-| 작업 디렉토리 | `/Users/chihun/Code/hwp_claude/work/` |
-| 출력 디렉토리 | `/Users/chihun/Code/hwp_claude/outputs/` |
+| 프로젝트 루트 | `/Users/chihun/Code/스킬/hwp_claude/` |
+| 기본 양식 템플릿 | `/Users/chihun/Code/스킬/hwp_claude/assets/report-template.hwpx` |
+| 네임스페이스 수정 스크립트 | `/Users/chihun/Code/스킬/hwp_claude/scripts/fix_namespaces.py` |
+| 레퍼런스 문서 | `/Users/chihun/Code/스킬/hwp_claude/references/` |
+| 작업 디렉토리 | `/Users/chihun/Code/스킬/hwp_claude/work/` |
+| 출력 디렉토리 | `/Users/chihun/Code/스킬/hwp_claude/outputs/` |
 
 ## 설치
 
@@ -181,9 +181,9 @@ for r in results:
 ```python
 import shutil, subprocess
 
-TEMPLATE = "/Users/chihun/Code/hwp_claude/assets/report-template.hwpx"
-WORK = "/Users/chihun/Code/hwp_claude/work/report.hwpx"
-OUTPUT = "/Users/chihun/Code/hwp_claude/outputs/report.hwpx"
+TEMPLATE = "/Users/chihun/Code/스킬/hwp_claude/assets/report-template.hwpx"
+WORK = "/Users/chihun/Code/스킬/hwp_claude/work/report.hwpx"
+OUTPUT = "/Users/chihun/Code/스킬/hwp_claude/outputs/report.hwpx"
 shutil.copy(TEMPLATE, WORK)
 
 # 1. 일괄 치환
@@ -202,7 +202,7 @@ zip_replace_sequential(WORK, WORK,
 
 # 3. 네임스페이스 후처리 (필수!)
 subprocess.run(
-    ["python", "/Users/chihun/Code/hwp_claude/scripts/fix_namespaces.py", WORK],
+    ["python", "/Users/chihun/Code/스킬/hwp_claude/scripts/fix_namespaces.py", WORK],
     check=True
 )
 
@@ -246,7 +246,7 @@ shutil.copy(WORK, OUTPUT)
 
 ```python
 subprocess.run(
-    ["python", "/Users/chihun/Code/hwp_claude/scripts/fix_namespaces.py", "output.hwpx"],
+    ["python", "/Users/chihun/Code/스킬/hwp_claude/scripts/fix_namespaces.py", "output.hwpx"],
     check=True
 )
 ```
@@ -260,7 +260,7 @@ subprocess.run(
 
 ```python
 subprocess.run(
-    ["python", "/Users/chihun/Code/hwp_claude/scripts/strip_linesegarray.py", "output.hwpx"],
+    ["python", "/Users/chihun/Code/스킬/hwp_claude/scripts/strip_linesegarray.py", "output.hwpx"],
     check=True
 )
 ```
@@ -269,7 +269,7 @@ subprocess.run(
 
 ```python
 subprocess.run(
-    ["python", "/Users/chihun/Code/hwp_claude/scripts/verify_lengths.py", "template.hwpx", "output.hwpx"],
+    ["python", "/Users/chihun/Code/스킬/hwp_claude/scripts/verify_lengths.py", "template.hwpx", "output.hwpx"],
     check=True
 )
 ```
